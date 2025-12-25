@@ -6,5 +6,39 @@
     <title>Pixel Art Creator</title>
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body></body>
+  <body>
+    <div class="app-container">
+      <header>
+        <h1>Pixel Art Creator</h1>
+        <p>Boop beep I'm pixelated.</p>
+      </header>
+      <main>
+        <aside class="tools-panel">
+          <div class="control-section">
+            <h3>Canvas Size</h3>
+            <label>
+              <span id="gridSizeDisplay">16×16</span>
+              <input
+                type="range"
+                id="gridSizeSlider"
+                min="4"
+                max="32"
+                step="4"
+                value="16"
+              />
+            </label>
+            <div class="size-options">
+              <span>4×4</span>
+              <span>8×8</span>
+              <span>16×16</span>
+              <span>24×24</span>
+              <span>32×32</span>
+            </div>
+          </div>
+        </aside>
+        <section class="canvas-container"></section>
+        <section class="preview-container"></section>
+      </main>
+    </div>
+  </body>
 </html>
