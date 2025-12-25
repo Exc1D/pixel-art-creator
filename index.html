@@ -14,6 +14,7 @@
       </header>
       <main>
         <aside class="tools-panel">
+          <!-- Grid Size Control -->
           <div class="control-section">
             <h3>Canvas Size</h3>
             <label>
@@ -35,6 +36,20 @@
               <span>32×32</span>
             </div>
           </div>
+
+          <!-- Color Control and Display -->
+          <div class="control-section">
+            <h3>Color</h3>
+            <div class="color-picker-container">
+              <input type="color" id="colorPicker" value="#000000" />
+              <div id="currentColorDisplay">
+                <div id="currentColorSwatch"></div>
+                <div id="currentColorCode"></div>
+              </div>
+            </div>
+          </div>
+
+          <div></div>
         </aside>
         <section class="canvas-container"></section>
         <section class="preview-container"></section>
