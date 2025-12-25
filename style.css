@@ -1,0 +1,333 @@
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Press Start 2P", cursive;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  padding: 20px;
+  color: #2d3436;
+}
+
+.app-container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* ============================================
+   HEADER
+   ============================================ */
+
+header {
+  text-align: center;
+  margin-bottom: 30px;
+  background: white;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+header h1 {
+  font-size: 24px;
+  color: #667eea;
+  margin-bottom: 10px;
+  text-shadow: 2px 2px 0px #764ba2;
+}
+
+header p {
+  font-size: 10px;
+  color: #636e72;
+}
+
+/* ============================================
+   MAIN LAYOUT
+   ============================================ */
+
+main {
+  display: grid;
+  grid-template-columns: 300px 1fr 250px;
+  gap: 20px;
+  align-items: start;
+}
+
+/* ============================================
+   CONTROL SECTIONS
+   ============================================ */
+
+.control-section {
+  background: white;
+  padding: 15px;
+  border-radius: 12px;
+  margin-bottom: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.control-section h3 {
+  font-size: 12px;
+  color: #667eea;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  border-bottom: 2px solid #dfe6e9;
+  padding-bottom: 8px;
+}
+
+/* ============================================
+   GRID SIZE CONTROL
+   ============================================ */
+
+#gridSizeSlider {
+  width: 100%;
+  height: 8px;
+  border-radius: 5px;
+  background: #dfe6e9;
+  outline: none;
+  cursor: pointer;
+  -webkit-appearance: none;
+  appearance: none;
+  margin: 10px 0;
+}
+
+#gridSizeSlider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #667eea;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+#gridSizeSlider::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #667eea;
+  cursor: pointer;
+  border: none;
+}
+
+#gridSizeDisplay {
+  display: block;
+  font-size: 14px;
+  font-weight: bold;
+  color: #2d3436;
+  margin-bottom: 5px;
+}
+
+.size-options {
+  display: flex;
+  justify-content: space-between;
+  font-size: 8px;
+  color: #636e72;
+  margin-top: 5px;
+}
+
+/* ============================================
+   COLOR PICKER
+   ============================================ */
+
+.color-picker-container {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+#colorPicker {
+  width: 80px;
+  height: 80px;
+  border: 3px solid #2d3436;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+#currentColorDisplay {
+  flex: 1;
+  background: #f8f9fa;
+  padding: 10px;
+  border-radius: 8px;
+  border: 2px solid #dfe6e9;
+  text-align: center;
+}
+
+#currentColorSwatch {
+  width: 50px;
+  height: 50px;
+  background: #000000;
+  border: 2px solid #2d3436;
+  border-radius: 8px;
+  margin: 0 auto 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+#currentColorCode {
+  display: block;
+  font-size: 10px;
+  color: #636e72;
+  font-family: monospace;
+}
+
+/* ============================================
+   TOOL BUTTONS
+   ============================================ */
+
+.tool-buttons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.tool-btn {
+  background: white;
+  border: 3px solid #2d3436;
+  padding: 12px;
+  font-size: 10px;
+  font-family: "Press Start 2P", cursive;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: all 0.2s;
+  color: #2d3436;
+  box-shadow: 4px 4px 0px #dfe6e9;
+}
+
+.tool-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 6px 6px 0px #dfe6e9;
+}
+
+.tool-btn.active {
+  background: #667eea;
+  color: white;
+  border-color: #667eea;
+  box-shadow: 0 0 15px rgba(102, 126, 234, 0.5);
+}
+
+/* ============================================
+   ACTION BUTTONS
+   ============================================ */
+
+.action-btn {
+  width: 100%;
+  background: white;
+  border: 3px solid #2d3436;
+  padding: 12px;
+  font-size: 10px;
+  font-family: "Press Start 2P", cursive;
+  cursor: pointer;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  transition: all 0.2s;
+  box-shadow: 4px 4px 0px #dfe6e9;
+}
+
+.action-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 6px 6px 0px #dfe6e9;
+}
+
+.action-btn.danger {
+  background: #ff7675;
+  color: white;
+  border-color: #d63031;
+}
+
+.action-btn.danger:hover {
+  background: #d63031;
+}
+
+/* ============================================
+   SHORTCUTS INFO
+   ============================================ */
+
+.shortcuts-info ul {
+  list-style: none;
+  font-size: 8px;
+  line-height: 1.8;
+}
+
+.shortcuts-info kbd {
+  background: #2d3436;
+  color: white;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 8px;
+  margin-right: 5px;
+}
+
+/* ============================================
+   PIXEL CANVAS
+   ============================================ */
+
+.canvas-container {
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#pixelCanvas {
+  display: grid;
+  gap: 1px;
+  background: #2d3436;
+  border: 4px solid #2d3436;
+  border-radius: 8px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+  cursor: crosshair;
+}
+
+.pixel {
+  background: white;
+  width: 100%;
+  height: 100%;
+  transition: background-color 0.05s;
+}
+
+.pixel:hover {
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.canvas-info {
+  margin-top: 20px;
+  font-size: 10px;
+  color: #636e72;
+}
+
+/* ============================================
+   PREVIEW PANEL
+   ============================================ */
+
+#previewCanvas {
+  width: 200px;
+  height: 200px;
+  background: white;
+  border: 3px solid #2d3436;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  image-rendering: pixelated;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: crisp-edges;
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+
+@media (max-width: 1200px) {
+  main {
+    grid-template-columns: 1fr;
+  }
+
+  .tools-panel,
+  .preview-panel {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+}
