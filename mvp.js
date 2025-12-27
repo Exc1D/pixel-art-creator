@@ -13,6 +13,88 @@ const clearBtn = document.getElementById("clearBtn");
 const gridToggleBtn = document.getElementById("gridToggleBtn");
 const toolButtons = document.querySelectorAll(".tool-btn");
 
+// Cyberpunk-themed color palettes
+const CYBERPUNK_PALETTES = {
+  neon: {
+    name: "⚡ Neon Nights",
+    colors: [
+      "#ff006e",
+      "#00f5ff",
+      "#9d4edd",
+      "#3a86ff",
+      "#ffbe0b",
+      "#0a0e27",
+      "#ff006e",
+      "#00f5ff",
+    ],
+  },
+  matrix: {
+    name: "🟢 Matrix Code",
+    colors: [
+      "#000000",
+      "#003b00",
+      "#008f11",
+      "#00ff41",
+      "#39ff14",
+      "#00ff00",
+      "#003b00",
+      "#000000",
+    ],
+  },
+  vaporwave: {
+    name: "🌸 Vaporwave",
+    colors: [
+      "#ff71ce",
+      "#01cdfe",
+      "#05ffa1",
+      "#b967ff",
+      "#fffb96",
+      "#ff006e",
+      "#f72585",
+      "#7209b7",
+    ],
+  },
+  outrun: {
+    name: "🏎️ Outrun",
+    colors: [
+      "#ff006e",
+      "#fb5607",
+      "#ffbe0b",
+      "#8338ec",
+      "#3a86ff",
+      "#ff006e",
+      "#fb5607",
+      "#ffbe0b",
+    ],
+  },
+  blade: {
+    name: "🗡️ Blade Runner",
+    colors: [
+      "#ff0040",
+      "#ff8c00",
+      "#00f0ff",
+      "#001eff",
+      "#8000ff",
+      "#ff0040",
+      "#001eff",
+      "#000000",
+    ],
+  },
+  ghost: {
+    name: "👻 Ghost Protocol",
+    colors: [
+      "#00ffff",
+      "#0080ff",
+      "#8000ff",
+      "#ff00ff",
+      "#ff0080",
+      "#ff0000",
+      "#000000",
+      "#ffffff",
+    ],
+  },
+};
+
 // ============================================
 // STATE
 // ============================================
