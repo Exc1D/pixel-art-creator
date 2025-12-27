@@ -395,3 +395,54 @@ console.log(
 // Play cyberpunk sounds on interactions
 const hoverSound = new Audio("cyber-hover.mp3");
 button.addEventListener("mouseenter", () => hoverSound.play());
+
+// At top of your script.js
+const SOUNDS = {
+  hover: new Audio(
+    "https://assets.mixkit.co/sfx/preview/mixkit-sci-fi-click-900.mp3"
+  ),
+  click: new Audio(
+    "https://assets.mixkit.co/sfx/preview/mixkit-arcade-game-jump-coin-216.mp3"
+  ),
+  clear: new Audio(
+    "https://assets.mixkit.co/sfx/preview/mixkit-cyber-laser-245.mp3"
+  ),
+};
+
+// Mute by default (let user enable)
+Object.values(SOUNDS).forEach((sound) => (sound.volume = 0.3));
+
+// Add to your event listeners
+toolButtons.forEach((btn) => {
+  btn.addEventListener("mouseenter", () => {
+    SOUNDS.hover.currentTime = 0;
+    SOUNDS.hover.play().catch(() => {}); // Catch autoplay errors
+  });
+
+  btn.addEventListener("click", () => {
+    SOUNDS.click.currentTime = 0;
+    SOUNDS.click.play().catch(() => {});
+  });
+});
+
+// Update clearCanvas function
+function clearCanvas() {
+  const confirmed = confirm("⚠️ WIPE ALL DATA? This cannot be undone!");
+  if (!confirmed) return;
+
+  SOUNDS.clear.play().catch(() => {});
+
+  // ... rest of clear logic
+}
+
+let soundEnabled = false;
+
+document
+  .getElementById("soundToggleBtn")
+  .addEventListener("click", function () {
+    soundEnabled = !soundEnabled;
+    Object.values(SOUNDS).forEach(
+      (sound) => (sound.volume = soundEnabled ? 0.3 : 0)
+    );
+    this.textContent = soundEnabled ? "🔊 SOUND: ON" : "🔇 SOUND: OFF";
+  });
