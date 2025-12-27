@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <button id="soundToggleBtn" class="action-btn">🔇 SOUND: OFF</button>
     <div class="app-container">
       <header>
         <h1>Pixel Art Creator</h1>
@@ -70,6 +71,42 @@
               <button class="tool-btn" data-tool="fill" title="Fill (F)">
                 Fill
               </button>
+            </div>
+          </div>
+
+          <!-- Add this to your tools panel, after the tool buttons section -->
+          <div class="control-section">
+            <h3>🔄 Symmetry Mode</h3>
+
+            <button id="symmetryToggleBtn" class="action-btn">
+              🔄 SYMMETRY: OFF
+            </button>
+
+            <div id="symmetryOptions" style="display: none; margin-top: 15px">
+              <label class="symmetry-option">
+                <input
+                  type="radio"
+                  name="symmetryType"
+                  value="vertical"
+                  checked
+                />
+                <span>↕️ VERTICAL</span>
+              </label>
+
+              <label class="symmetry-option">
+                <input type="radio" name="symmetryType" value="horizontal" />
+                <span>↔️ HORIZONTAL</span>
+              </label>
+
+              <label class="symmetry-option">
+                <input type="radio" name="symmetryType" value="quad" />
+                <span>✚ QUAD</span>
+              </label>
+
+              <label class="symmetry-option">
+                <input type="radio" name="symmetryType" value="diagonal" />
+                <span>⤢ DIAGONAL</span>
+              </label>
             </div>
           </div>
 
