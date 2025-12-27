@@ -29,6 +29,8 @@ body {
   color: var(--text-primary);
   position: relative;
   overflow-x: hidden;
+  cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"><circle cx="10" cy="10" r="8" fill="none" stroke="%2300f5ff" stroke-width="2"/></svg>'),
+    auto;
 }
 
 /* Animated Background Grid */
@@ -436,7 +438,7 @@ main {
   border-color: var(--neon-cyan);
   box-shadow: 0 0 30px var(--neon-cyan), 0 5px 25px rgba(0, 245, 255, 0.5),
     inset 0 0 20px rgba(255, 255, 255, 0.1);
-  animation: buttonPulse 2s ease-in-out infinite;
+  animation: buttonPulse 2s ease-in-out infinite, glitch 5s infinite;
 }
 
 @keyframes buttonPulse {
