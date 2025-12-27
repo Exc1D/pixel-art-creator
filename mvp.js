@@ -391,3 +391,7 @@ console.log("✅ Ready to create pixel art!");
 console.log(
   "⌨️ Shortcuts: P (Pen) | E (Eraser) | I (Eyedropper) | F (Fill) | G (Grid) | C (Clear)"
 );
+
+// Play cyberpunk sounds on interactions
+const hoverSound = new Audio("cyber-hover.mp3");
+button.addEventListener("mouseenter", () => hoverSound.play());
